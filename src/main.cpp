@@ -17,8 +17,6 @@ Arduino_ILI9341 display = Arduino_ILI9341(&bus, TFT_RESET);
 void setup(void)
 {
 
-
-
 display.begin();
 display.setRotation(3);
 //display.getTextBounds()
@@ -96,9 +94,16 @@ display.print("chamber");
 delay(5000);
 
 display.fillScreen(BLUE);
-delay(500);
+delay(250);
+display.fillScreen(BLACK);
+display.fillScreen(BLUE);
+delay(250);
+display.fillScreen(BLACK);
 display.fillScreen(GREEN);
-delay(500); 
+delay(250);
+display.fillScreen(BLACK);
+display.fillScreen(GREEN);
+delay(250); 
 
 display.fillScreen(BLACK);
 display.setFont(&Orbitron_Bold_45);
